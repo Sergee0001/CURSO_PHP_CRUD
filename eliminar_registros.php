@@ -14,22 +14,15 @@
         exit();
      }
      mysqli_select_db($coneccion,$db_nombre) or die ("no se encuentra la BBDD");
-    $consulta="INSERT INTO CLIENTES (CODIGO_CLIENTE,EMPRESA,DIRECCION,POBLACION,TELEFONO,RESPONSABLE)
-  
-     VALUES ('$codigo_cliente','$empresa','$direccion','$poblacion','$telefono','$responsable') ";
+    $consulta="DELETE FROM CLIENTES WHERE CODIGO_CLIENTE='$codigo_cliente'";
 
     $rs=mysqli_query($coneccion,$consulta);
 
     if($rs==false){
-        echo "ERROR AL INSERTAR";
+        echo "ERROR AL ELIMINAR";
     }else{
-        echo "registro guardado";
-        echo "<table><tr><td>$codigo_cliente</td></tr>";
-        echo "<tr><td>$empresa</td></tr>";
-        echo "<tr><td>$direccion</td></tr>";
-        echo "<tr><td>$poblacion</td></tr>";
-        echo "<tr><td>$telefono</td></tr>";
-        echo "<tr><td>$responsable</td></tr></table>";
+        echo "registro ELIMINADO";
+
 
     }
 
