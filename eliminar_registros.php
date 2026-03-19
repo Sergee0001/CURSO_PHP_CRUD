@@ -21,7 +21,11 @@
     if($rs==false){
         echo "ERROR AL ELIMINAR";
     }else{
-        echo "registro ELIMINADO";
+        if(mysqli_affected_rows($coneccion)==0){
+            echo "no hay registros eliminados";
+        }else{
+            echo "Los registros eliminados ". mysqli_affected_rows($coneccion) . "";
+        }
 
 
     }

@@ -10,7 +10,7 @@
     $busqueda=$_GET["buscar"];
 
     require("datos_coneccion.php");
-
+    
     $coneccion=mysqli_connect($db_host,$db_usuario,$db_contraseña,$db_nombre);
 
     if(mysqli_connect_errno()){

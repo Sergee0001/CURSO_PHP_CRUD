@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action ="pagina_busqueda.php" method="get">
+    <form action ="formulario_actualizar.php" method="get">
     <label>Buscar:<input type="text" name="buscar"></label>
     <input type ="submit" name ="enviando" value ="Dale!">
     </form>
